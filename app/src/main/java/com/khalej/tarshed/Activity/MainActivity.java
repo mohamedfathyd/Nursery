@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     Realm realm;
     ImageView offer;
-    TextView rased;
+    TextView rased,astbian;
     private SharedPreferences sharedpref;
     Typeface myTypeface;
     private SharedPreferences.Editor edt;
@@ -134,6 +134,15 @@ public class MainActivity extends AppCompatActivity {
         rased=findViewById(R.id.rased);
         rased.setText(sharedpref.getString("points","")+"");
         roaia=findViewById(R.id.roaia);
+        astbian=findViewById(R.id.astbian);
+        astbian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse( "https://forms.gle/krERk9vfqpQEKp3k9" ) );
+
+                startActivity( browse );
+            }
+        });
         roaia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
