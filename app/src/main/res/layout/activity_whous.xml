@@ -8,7 +8,7 @@
     android:background="@drawable/backa"
     tools:context="com.khalej.Boutique.Activity.Whous">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:local="http://schemas.android.com/apk/res-auto"
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
     <RelativeLayout
         android:layout_width="match_parent"
         android:background="@drawable/sss"

@@ -7,7 +7,7 @@
     android:background="@drawable/backa"
     android:layoutDirection="ltr"
     >
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:local="http://schemas.android.com/apk/res-auto"
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
             android:text="حذف جهاز"
             android:layout_gravity="center"
             android:id="@+id/toolbar_title" />
-    </android.support.v7.widget.Toolbar>
-    <android.support.v7.widget.RecyclerView
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:layout_below="@+id/app_bar"
         >
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
     <ProgressBar
         android:id="@+id/progressBar_subject"
         style="?android:attr/progressBarStyleLarge"

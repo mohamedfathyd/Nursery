@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.khalej.tarshed">
+    package="com.khalej.consumer">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name=".application"
+        android:name="com.khalej.consumer.application"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/log"
@@ -23,36 +23,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.Roaia"></activity>
-        <activity android:name=".Activity.Sahb" />
-        <activity android:name=".Activity.Orders" />
-        <activity android:name=".Activity.MainAdmin" />
-        <activity android:name=".Activity.New_charge" />
-        <activity android:name=".Activity.Message" />
-        <activity android:name=".Activity.Whous" />
-        <activity android:name=".Activity.Registration" />
-        <activity android:name=".Activity.Login" />
-        <activity android:name=".Activity.SplashActivity">
+        <activity android:name="com.khalej.consumer.Activity.General_category"></activity>
+        <activity android:name="com.khalej.consumer.Activity.Roaia" />
+        <activity android:name="com.khalej.consumer.Activity.Sahb" />
+        <activity android:name="com.khalej.consumer.Activity.Orders" />
+        <activity android:name="com.khalej.consumer.Activity.MainAdmin" />
+        <activity android:name="com.khalej.consumer.Activity.New_charge" />
+        <activity android:name="com.khalej.consumer.Activity.Message" />
+        <activity android:name="com.khalej.consumer.Activity.Whous" />
+        <activity android:name="com.khalej.consumer.Activity.Registration" />
+        <activity android:name="com.khalej.consumer.Activity.Login" />
+        <activity android:name="com.khalej.consumer.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.Order_detail" />
-        <activity android:name=".Activity.Show" />
+        <activity android:name="com.khalej.consumer.Activity.MainActivity" />
+        <activity android:name="com.khalej.consumer.Activity.Order_detail" />
+        <activity android:name="com.khalej.consumer.Activity.Show" />
         <activity
-            android:name=".Activity.Delete_annonce"
+            android:name="com.khalej.consumer.Activity.Delete_annonce"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Add_annonce"
+            android:name="com.khalej.consumer.Activity.Add_annonce"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Delete_category"
+            android:name="com.khalej.consumer.Activity.Delete_category"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Add_category_"
+            android:name="com.khalej.consumer.Activity.Add_category_"
             android:screenOrientation="portrait" />
     </application>
 

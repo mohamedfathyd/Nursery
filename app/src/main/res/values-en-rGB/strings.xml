@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" >ترشيد</string>
+    <string name="app_name" >Consumer</string>
     <string name="hint_name" >name</string>
     <string name="rased">Your current balance :</string>
     <string name="charge">recharge the balance</string>
