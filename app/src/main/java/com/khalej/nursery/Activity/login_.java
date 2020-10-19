@@ -44,6 +44,7 @@ public class login_ {
                 edt.putString("password",contactList.get(0).getPassword());
                 edt.putString("points",contactList.get(0).getPoints());
                 edt.putString("charge",contactList.get(0).getPoints());
+                edt.putInt("type",contactList.get(0).getType());
                 edt.putString("date", String.valueOf(contactList.get(0).getAge()));
                 edt.putString("remember","yes");
                 edt.apply();

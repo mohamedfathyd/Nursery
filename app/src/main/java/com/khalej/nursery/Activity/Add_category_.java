@@ -156,12 +156,12 @@ spin=findViewById(R.id.spinCountry);
             return;
 
         }
-        progressDialog = ProgressDialog.show(Add_category_.this,"جارى تسجيل الجهاز الجديد","Please wait...",false,false);
+        progressDialog = ProgressDialog.show(Add_category_.this,"جارى تسجيل التدريب الجديد","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_first_category(textInputEditTextname.getText().toString()
-                ,image,textInputEditTextphone.getText().toString(),textInputEditTextaddress.getText().toString()
-                ,textInputEditTexterror.getText().toString(), String.valueOf(category_id));
+                ,image,textInputEditTextphone.getText().toString()+"",textInputEditTextaddress.getText().toString()
+                ,textInputEditTexterror.getText().toString(), category_id);
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
@@ -169,7 +169,7 @@ spin=findViewById(R.id.spinCountry);
                 progressDialog.dismiss();
 
                 AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(Add_category_.this);
-                dlgAlert.setMessage("تم تسجيل الجهاز الجديد بنجاح ");
+                dlgAlert.setMessage("تم تسجيل التدريب الجديد بنجاح ");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setPositiveButton("OK", null);

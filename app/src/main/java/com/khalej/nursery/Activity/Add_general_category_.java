@@ -134,7 +134,7 @@ public class Add_general_category_ extends AppCompatActivity {
             return;
 
         }
-        progressDialog = ProgressDialog.show(Add_general_category_.this,"جارى تسجيل المعمل الجديد","Please wait...",false,false);
+        progressDialog = ProgressDialog.show(Add_general_category_.this,"جارى تسجيل النشاط الجديد","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_general_category(textInputEditTextname.getText().toString()
@@ -146,7 +146,7 @@ public class Add_general_category_ extends AppCompatActivity {
                 progressDialog.dismiss();
 
                 AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(Add_general_category_.this);
-                dlgAlert.setMessage("تم تسجيل المعمل الجديد بنجاح ");
+                dlgAlert.setMessage("تم تسجيل النشاط الجديد بنجاح ");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setPositiveButton("OK", null);

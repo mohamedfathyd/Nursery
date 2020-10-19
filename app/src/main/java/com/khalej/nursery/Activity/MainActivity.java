@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         this.setTitle("");
         swtch=findViewById(R.id.swtch);
-
+        roaia=findViewById(R.id.roaia);
         logout=findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

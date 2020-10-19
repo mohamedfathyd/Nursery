@@ -62,7 +62,7 @@ public class RecyclerAdapter_second extends RecyclerView.Adapter<RecyclerAdapter
                 intent.putExtra("description",link);
                 intent.putExtra("id",id);
                 intent.putExtra("price",price);
-                intent.putExtra("error",contactslist.get(position).getError());
+                intent.putExtra("error",contactslist.get(position).getDescription());
                 context.startActivity(intent);
             }
 

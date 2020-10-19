@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Apiclient_home {
     //http://jamalah.com/
-    private static final String url="http://applicationme.com/";
+    private static final String url="https://applicationme.com/";
 
     private static Retrofit retrofit =null;
     public static Retrofit getapiClient(){

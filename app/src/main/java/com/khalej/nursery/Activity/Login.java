@@ -114,9 +114,8 @@ public class Login extends AppCompatActivity {
 
         });
         textInputEditTextpassword=(TextInputEditText)findViewById(R.id.textInputEditTextPassword);
-        Naccount=(AppCompatButton)findViewById(R.id.textViewLinkRegister);
-        textViewLinkRegisterr=findViewById(R.id.textViewLinkRegisterr);
-        textViewLinkRegisterrr=findViewById(R.id.textViewLinkRegisterrr);
+        Naccount=findViewById(R.id.textViewLinkRegisterr);
+       textViewLinkRegisterrr=findViewById(R.id.textViewLinkRegister);
         Naccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

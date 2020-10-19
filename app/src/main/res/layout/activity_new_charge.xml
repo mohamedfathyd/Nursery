@@ -106,7 +106,7 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/shape2"
                 android:textColor="#000000"
-                android:text="@string/charge" />
+                android:text="تسجيل الغياب" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

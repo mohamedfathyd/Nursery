@@ -52,7 +52,7 @@ public class Registration extends AppCompatActivity {
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "Nasser.otf", true);
 
-
+       i=getIntent();
 
         inisialize();
 
