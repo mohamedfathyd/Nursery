@@ -19,7 +19,7 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="rtl"
+            android:layoutDirection="ltr"
             android:background="@color/colorPrimaryDark"
             local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
@@ -33,14 +33,21 @@
                 android:text="لوحة التحكم"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title" />
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_power_settings_new_black_24dp"
+                android:id="@+id/logout"
+                />
         </androidx.appcompat.widget.Toolbar>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerInParent="true"
-            android:layout_margin="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
             android:layout_below="@+id/app_bar"
             >
             <Button
@@ -49,7 +56,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
                 android:text="طلبات الشحن "
-
+                android:visibility="gone"
                 android:id="@+id/orders"
 
                 />
@@ -61,6 +68,18 @@
                 android:text="سحب رصيد"
                   android:layout_marginTop="30dp"
                 android:id="@+id/sahb"
+                android:visibility="gone"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/shape2"
+                android:text="أضافة نشاط"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:id="@+id/addm"
 
                 />
             <Button
@@ -68,7 +87,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
-                android:text="أضافة جهاز"
+                android:text="حذف نشاط"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:id="@+id/deletem"
+
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/shape2"
+                android:text="أضافة تدريب داخل النشاط"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:layout_marginTop="30dp"
                 android:id="@+id/add"
 
@@ -78,7 +111,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
-                android:text="مسح جهاز"
+                android:text="حذف تدريب"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:layout_marginTop="30dp"
                 android:id="@+id/delete"
 
@@ -87,8 +122,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textStyle="bold"
                 android:background="@drawable/shape2"
-                android:text="أضافة أعلان خارجي"
+                android:text="أضافة خبر خارجي"
+                android:textColor="#ffffff"
                 android:layout_marginTop="30dp"
                 android:id="@+id/addannonce"
 
@@ -96,9 +133,11 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#ffffff"
                 android:layout_gravity="center"
+                android:textStyle="bold"
                 android:background="@drawable/shape2"
-                android:text="حذف أعلان خارجي"
+                android:text="حذف خبر خارجي"
                 android:layout_marginTop="30dp"
                 android:id="@+id/deleteannonce"
 

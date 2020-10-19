@@ -3,7 +3,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backa"
+    android:background="@drawable/backk"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -95,11 +95,24 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-
-            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
             android:background="@drawable/shape2"
             android:text="@string/text_login" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textViewLinkRegisterr"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
 
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/text_not_member"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/textViewLinkRegister"
@@ -111,10 +124,24 @@
             android:layout_gravity="center"
             android:background="@drawable/shape2"
 
-            android:textColor="#000000"
-
-            android:text="@string/text_not_member"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/re"
            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textViewLinkRegisterrr"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="@string/ree"
+            />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButtonbb"
             android:layout_width="100dp"

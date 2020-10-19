@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backa"
+    android:background="@drawable/backk"
     android:layoutDirection="ltr"
     >
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,7 +22,7 @@
             android:textSize="18dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:text="سحب رصيد"
+            android:text="الطلاب"
             android:layout_gravity="center"
             android:id="@+id/toolbar_title" />
     </androidx.appcompat.widget.Toolbar>

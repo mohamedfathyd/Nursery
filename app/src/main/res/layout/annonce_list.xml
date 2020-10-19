@@ -42,7 +42,7 @@
                     android:layout_margin="5dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="10dp"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitXY"
                     android:src="@drawable/log" />
 
 

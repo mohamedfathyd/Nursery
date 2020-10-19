@@ -211,7 +211,7 @@
                     android:id="@+id/getfinal"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:text="تأكيد الشحن ومسح الطلب" />
+                    android:text="تأكيد الشحن وحذف الطلب" />
 
             </LinearLayout>
         </RelativeLayout>

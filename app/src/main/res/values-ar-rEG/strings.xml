@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">كوزمر</string>
+    <string name="app_name">nursery</string>
     <string name="hint_name">الأسم</string>
     <string name="rased">رصيدك الحالي :</string>
     <string name="charge">شحن رصيد</string>
@@ -10,16 +10,17 @@
     <string name="whous">من نحن</string>
     <string name="callus">اتصل بنا</string>
     <string name="myorders">طلباتي</string>
-    <string name="roaiaa">ترشيد  استهلاك  الطاقة  الكهربائية ضرورة  حياة وليست  اختيارا  ..</string>
+    <string name="roaiaa">تزويد الأطفال ببيئة دافئة وآمنة وتزويد الاباء بتفاصيل طفلهم لمنحهم الاطمئنان والراحة  ، ومنح الاطفال مهارات اللغة والتواصل للتعبير عن أنفسهم وقدرت الاباء بمتابعتهم </string>
     <string name="astbian">استبيان</string>
     <string name="addto">إضافة الى سلة المشتريات</string>
-    <string name="whoustxtt"> ترشيد  استهلاك  الطاقة  الكهربائية ضرورة  حياة وليست  اختيارا  ..
-
-تحقيق  التنمية  المستدامة  للمجتمع  في  مجال الطاقة  من  خلال    تطبيقها  على  الواقع  بشكل   مشروعات  ومبادرات  في إطار  تحقيق  التنمية  المستدامة  للمجتمع  ،  وتحقيق  الرؤية  الاستراتيجية  لتغيير  نمط  الاستهلاك  والسعي  لتقليص  التنامي  المتزايد  في  استهلاك  الطاقة  من  خلات  تسريع  إصدار  قانون  لترشيد  استهلاك  الطاقة  يحدد  آليات  واضحة  ومهمة  ويتصدى  لمشكلة  ارتفاع  معدلات  الاستهلاك  . </string>
-    <string name="whoustxt">كوزمر هو  تطبيق يهدف  لترشيد  استهلاك  الطاقة  الكهربائية يستطيع  من  خلاله  العملاء  مراقبة   حجم استهلاكهم  اليومي  من  الطاقة  وطلب  الطاقة  عند  الحاجة  إليها  . </string>
+    <string name="whoustxtt"> توفير برنامج لمتابعة الاباء لاطفالهم
+تفعيل استخدام التكنلوجيا الحديثة داخ الروضة وخارجها
+توفير الروضة بيئة مساعدة للاباء في المتابعة
+تواصل الروضة مع الاباء من خلال المشاركة المجتماعية الفعالة </string>
+    <string name="whoustxt">يقوم برنامج الحضانة على الاطلاع على تطورات الحضانة بكل سهولة ، كما يمكنك الاطلاع على مزيد من المعلومات عن تطبيق الحضانة فتكنولوجيا توفر الجهد والوقت وتزيد على الخدمات التي توفرها الحضانة للأطفال وذويهم ، وتقدم لأولياء الأمور معلومات شاملة ومهمة عن أطفالهم ومن الممكن استخدامه عن طريق تحميل التطبيق الخاص به على الهواتف الذكية. وهو مبني على عدد الأطفال الموجودين في رياض الأطفال</string>
     <string name="name">الاسم</string>
     <string name="resala">رسالتنا</string>
-    <string name="address">رقم عداد الكهرباء</string>
+    <string name="address">الفصل</string>
     <string name="phone">رقم الجوال</string>
     <string name="ask">هل انت متأكد انك تريد تأكيد هذا الطلب وارساله؟</string>
     <string name="load">جاري تسجيل طلبك</string>
@@ -27,7 +28,7 @@
     <string name="mobile">... وارسال ايصال التحويل الى الواتس آب هذا :  971555733305   لأتمام عملية الشراء</string>
     <string name="listorders">قائمة طلباتك المحدده</string>
     <string name="confirm">تأكيد</string>
-    <string name="deletemontag">مسح المنتاجات</string>
+    <string name="deletemontag">حذف المنتاجات</string>
     <string name="login">تسجيل دخول</string>
     <string name="ignore">تخطي</string>
     <string name="orderdetail">تفاصيل الطلب</string>
@@ -46,6 +47,8 @@
     <string name="text_register">انشاء حساب</string>
     <string name="terms">الشروط والأحكام</string>
     <string name="text_not_member">أنشاء حساب</string>
+    <string name="re">أنشاء حساب  مشرف</string>
+    <string name="ree">أنشاء حساب  محاضر</string>
     <string name="sh">
         الهدف من التطبيق :
 1-	التجول في بيئة إلكترونية سهلة تسمح للأسر المنتجة و تسمح للأعمال بالنمو و الازدهار ..

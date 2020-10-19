@@ -4,7 +4,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backa"
+    android:background="@drawable/backk"
     android:layoutDirection="ltr"
     >
     <RelativeLayout
@@ -24,7 +24,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:text="@string/chargee"
+                android:text="غياب الطالب"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title" />
         </androidx.appcompat.widget.Toolbar>
@@ -32,16 +32,18 @@
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_below="@+id/app_bar"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/log"
             android:id="@+id/image"
             />
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_below="@+id/image"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="20dp"
 
 
             android:orientation="vertical">
@@ -54,16 +56,47 @@
                 android:layout_marginTop="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditTextName"
+                    android:id="@+id/num_days"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="أدخل القيمة المراد شحنها بالريال"
+                    android:hint="أدخل عدد ايام الغياب"
                     android:textColor="#000000"
                     android:inputType="number"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="أدخل رقم الشهر"
+                    android:textColor="#000000"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="ملاحظات"
+                    android:textColor="#000000"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <androidx.appcompat.widget.AppCompatButton

@@ -4,7 +4,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backa"
+    android:background="@drawable/backk"
     android:layoutDirection="ltr"
     >
     <RelativeLayout
@@ -24,7 +24,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:text="أضافة اعلان خارجى"
+                android:text="أضافة خبر خارجى"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title" />
         </androidx.appcompat.widget.Toolbar>
@@ -73,7 +73,7 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/shape2"
                 android:textColor="#ffffff"
-                android:text="أضافة اعلان" />
+                android:text="أضافة خبر" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

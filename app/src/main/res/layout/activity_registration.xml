@@ -3,7 +3,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backa"
+    android:background="@drawable/backk"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -81,6 +81,7 @@
             android:id="@+id/textInputLayoutaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:background="@drawable/shape"
             android:layout_marginTop="20dp">
 
@@ -137,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
 
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:text="@string/text_register" />
 
         <androidx.appcompat.widget.AppCompatTextView

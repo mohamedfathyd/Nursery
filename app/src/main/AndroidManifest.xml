@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.khalej.consumer">
+    package="com.khalej.nursery">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name="com.khalej.consumer.application"
+        android:name="com.khalej.nursery.application"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/log"
@@ -23,37 +23,46 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.khalej.consumer.Activity.General_category"></activity>
-        <activity android:name="com.khalej.consumer.Activity.Roaia" />
-        <activity android:name="com.khalej.consumer.Activity.Sahb" />
-        <activity android:name="com.khalej.consumer.Activity.Orders" />
-        <activity android:name="com.khalej.consumer.Activity.MainAdmin" />
-        <activity android:name="com.khalej.consumer.Activity.New_charge" />
-        <activity android:name="com.khalej.consumer.Activity.Message" />
-        <activity android:name="com.khalej.consumer.Activity.Whous" />
-        <activity android:name="com.khalej.consumer.Activity.Registration" />
-        <activity android:name="com.khalej.consumer.Activity.Login" />
-        <activity android:name="com.khalej.consumer.Activity.SplashActivity">
+        <activity android:name="com.khalej.nursery.Activity.General_category"></activity>
+        <activity android:name="com.khalej.nursery.Activity.Roaia" />
+        <activity android:name="com.khalej.nursery.Activity.Sahb" />
+        <activity android:name="com.khalej.nursery.Activity.Orders" />
+        <activity android:name="com.khalej.nursery.Activity.MainAdmin" />
+        <activity android:name="com.khalej.nursery.Activity.New_charge" />
+        <activity android:name="com.khalej.nursery.Activity.Message" />
+        <activity android:name="com.khalej.nursery.Activity.Whous" />
+        <activity android:name="com.khalej.nursery.Activity.Registration" />
+        <activity android:name="com.khalej.nursery.Activity.Login" />
+        <activity android:name="com.khalej.nursery.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.khalej.consumer.Activity.MainActivity" />
-        <activity android:name="com.khalej.consumer.Activity.Order_detail" />
-        <activity android:name="com.khalej.consumer.Activity.Show" />
+        <activity android:name="com.khalej.nursery.Activity.MainActivity" />
+        <activity android:name="com.khalej.nursery.Activity.Order_detail" />
+        <activity android:name="com.khalej.nursery.Activity.Show" />
         <activity
-            android:name="com.khalej.consumer.Activity.Delete_annonce"
+            android:name="com.khalej.nursery.Activity.Delete_annonce"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.khalej.consumer.Activity.Add_annonce"
+            android:name="com.khalej.nursery.Activity.Add_annonce"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.khalej.consumer.Activity.Delete_category"
+            android:name="com.khalej.nursery.Activity.Delete_category"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.khalej.consumer.Activity.Add_category_"
+            android:name="com.khalej.nursery.Activity.Add_category_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.khalej.nursery.Activity.Second_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.khalej.nursery.Activity.Add_general_category_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.khalej.nursery.Activity.Delete_general_category"
             android:screenOrientation="portrait" />
     </application>
 

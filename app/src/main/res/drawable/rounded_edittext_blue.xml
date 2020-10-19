@@ -4,16 +4,16 @@
     android:layout_height="wrap_content"
     >
 
-    <solid  android:startColor="#0d729b"
-        android:centerColor="#dfeaae"
-        android:endColor="#dfeaae"
+    <solid  android:startColor="#fdee1e"
+        android:centerColor="#3798d4"
+        android:endColor="#ee5994"
 
 
         />
 
     <stroke
         android:width="1.5dp"
-        android:color="#b3b3b3" />
+        android:color="#ffffff" />
     <corners
         android:topLeftRadius="80dp"
         android:topRightRadius="80dp"

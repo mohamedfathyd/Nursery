@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">Consumer</string>
+    <string name="app_name">nursery</string>
     <string name="hint_name">name</string>
     <string name="rased">Your current balance :</string>
     <string name="charge">recharge the balance</string>
     <string name="Register_Tager">Register As tradesman</string>
     <string name="roaia">Our Vision</string>
     <string name="astbian">A questionnaire</string>
-    <string name="roaiaa">Rationalization of electricity consumption is a necessity of life and not an option ..</string>
+    <string name="roaiaa"> Providing children with a warm and safe environment and providing parents with their childs details to give them reassurance and comfort, and give children language and communication skills to express themselves and parents are able to follow them</string>
+
     <string name="hint_phone">mobile</string>
     <string name="whous">Who us</string>
     <string name="callus">Call us</string>
@@ -20,10 +21,11 @@
     <string name="success">Your application registration has been successfully registered</string>
     <string name="load">Your request is being registered</string>
     <string name="lang">English</string>
-    <string name="whoustxt">Rationalization is an application designed to rationalize the consumption of electrical energy through which customers can monitor the volume of their daily consumption of energy and demand energy when it is needed. </string>
-    <string name="whoustxtt"> Rationalization of electricity consumption is a necessity of life and not an option ..
-
-Achieving the sustainable development of society in the field of energy by applying it to reality in the form of projects and initiatives within the framework of achieving sustainable development of society, and achieving the strategic vision to change the pattern of consumption and seeking to reduce the growing growth in energy consumption through accelerating the issuance of an energy saving law that sets clear and important mechanisms and addresses the problem of rising Consumption rates.</string>
+    <string name="whoustxt">The nursery program is based on learning about nursery developments easily, and you can also see more information about the nursery application, technology that saves effort and time and increases the services provided by the nursery to children and their families, and provides parents with comprehensive and important information about their children and it can be used by downloading the special application Tags on smartphones. It is based on the number of children in the kindergarten </string>
+    <string name="whoustxtt">Provide a program for parents to follow up on their children
+Activating the use of modern technology inside and outside the kindergarten
+The kindergarten provides a supportive environment for parents in follow-up
+The kindergarten communicates with parents through effective social participation</string>
     <string name="name">name</string>
     <string name="address">Electricity meter number</string>
     <string name="phone">Phone</string>
@@ -42,6 +44,8 @@ Achieving the sustainable development of society in the field of energy by apply
     <string name="text_login">Login</string>
     <string name="text_register">Create account</string>
     <string name="text_not_member">Registration</string>
+    <string name="re">Registration Supervisor</string>
+    <string name="ree">Registration Lecturer </string>
     <string name="search">Search</string>
     <string name="terms">Terms and Conditions</string>
     <string name="orderdetail">Order Details</string>
