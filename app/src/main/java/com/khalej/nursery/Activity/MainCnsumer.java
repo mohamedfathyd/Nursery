@@ -54,7 +54,8 @@ public class MainCnsumer extends AppCompatActivity {
         Login4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(MainCnsumer.this,Sahb_bb.class);
+                startActivity(intent);
             }
         });
         logout=findViewById(R.id.logout);

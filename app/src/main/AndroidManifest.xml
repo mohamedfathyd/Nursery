@@ -72,6 +72,9 @@
             android:name=".Activity.Sahb_b"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Activity.Sahb_bb"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Activity.New_report"
             android:screenOrientation="portrait" />
         <activity
@@ -82,6 +85,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Servcies"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.chat_s"
             android:screenOrientation="portrait" />
     </application>
 

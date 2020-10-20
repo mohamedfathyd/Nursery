@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.khalej.nursery.Activity.New_charge;
-import com.khalej.nursery.Activity.New_report;
+import com.khalej.nursery.Activity.chat_s;
 import com.khalej.nursery.Model.apiinterface_home;
 import com.khalej.nursery.Model.contact_userinfo;
 import com.khalej.nursery.R;
@@ -20,7 +20,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerAdapter_sahb_b extends RecyclerView.Adapter<RecyclerAdapter_sahb_b.MyViewHolder> {
+public class RecyclerAdapter_sahb_bb extends RecyclerView.Adapter<RecyclerAdapter_sahb_bb.MyViewHolder> {
     Typeface myTypeface;
     int points;
     private Context context;
@@ -28,7 +28,7 @@ public class RecyclerAdapter_sahb_b extends RecyclerView.Adapter<RecyclerAdapter
 
     apiinterface_home apiinterface;
 
-    public RecyclerAdapter_sahb_b(Context context, List<contact_userinfo> contactslist){
+    public RecyclerAdapter_sahb_bb(Context context, List<contact_userinfo> contactslist){
         this.contactslist=contactslist;
         this.context=context;
 
@@ -54,7 +54,7 @@ public class RecyclerAdapter_sahb_b extends RecyclerView.Adapter<RecyclerAdapter
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(context, New_report.class);
+                Intent intent =new Intent(context, chat_s.class);
                 intent.putExtra("id",contactslist.get(position).getId());
                 intent.putExtra("name",contactslist.get(position).getName());
                 context.startActivity(intent);

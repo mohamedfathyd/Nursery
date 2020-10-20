@@ -89,5 +89,13 @@ public interface apiinterface_home {
     @POST("nursery/Nursery_get_report.php")
     Call<List<contact_report>> getcontacts_report(@Field("id") int id);
 
+    @FormUrlEncoded
+    @POST("nursery/Nursery_get_chat.php")
+    Call<List<contact_chat>> getcontacts_chat(@Field("id") int id);
+
+    @FormUrlEncoded
+    @POST("nursery/Nursery_add_chat.php")
+    Call<ResponseBody> getcontacts_addchat(@Field("sud_id") int id,@Field("sender") int sender,@Field("text") String text);
+
 }
 
