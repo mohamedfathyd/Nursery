@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backk"
+    tools:context=".Activity.AfterLogin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+            android:text="تسجيل دخول ولي الأمر"
+            android:layout_marginTop="30dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:id="@+id/login1"
+
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+            android:text=" تسجيل دخول المشرف "
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:id="@+id/login2"
+
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+            android:text=" تسجيل دخول الأدمن "
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:id="@+id/login3"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

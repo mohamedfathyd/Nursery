@@ -21,7 +21,7 @@ public class Roaia extends AppCompatActivity {
         setSupportActionBar(toolbar);
         this.setTitle("");
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this, "Nasser.otf", true);
+        calligrapher.setFont(this, "Droid.ttf", true);
         this.setTitle("");
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left_black_24dp);
         setSupportActionBar(toolbar);

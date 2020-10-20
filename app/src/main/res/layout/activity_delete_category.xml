@@ -22,7 +22,7 @@
             android:textSize="18dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:text="حذف تدريب"
+            android:text="Delete Offer"
             android:layout_gravity="center"
             android:id="@+id/toolbar_title" />
     </androidx.appcompat.widget.Toolbar>

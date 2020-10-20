@@ -48,7 +48,11 @@ public class login_ {
                 edt.putString("date", String.valueOf(contactList.get(0).getAge()));
                 edt.putString("remember","yes");
                 edt.apply();
-                context.startActivity(new Intent(context, MainActivity.class));}
+                if(sharedpref.getInt("type",0)==2){
+                    context.startActivity(new Intent(context,MainCnsumer.class));
+                }
+                else{
+                    context.startActivity(new Intent(context,MainActivity.class));}}
                 catch (Exception e){
 
                 }

@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -51,7 +52,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView,recyclerView2;
     private RecyclerView.LayoutManager layoutManager;
-    ImageView absence;
+    Button absence;
     CountDownTimer countDownTimer;
     private RecyclerAdapter_first recyclerAdapter;
     private RecyclerAdapter_first_annonce recyclerAdapter_annonce;
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         setContentView(R.layout.activity_main);
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this, "Nasser.otf", true);
+        calligrapher.setFont(this, "Droid.ttf", true);
 
         sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
         edt = sharedpref.edit();
@@ -121,12 +122,15 @@ public class MainActivity extends AppCompatActivity {
                 edt.putString("remember","");
                 edt.putInt("type",0);
                 edt.apply();
-                startActivity(new Intent(MainActivity.this,Login.class));
+                startActivity(new Intent(MainActivity.this,AfterLogin.class));
                 finish();
             }
         });
 
         absence=findViewById(R.id.absence);
+        if(sharedpref.getInt("type",0)==2){
+            absence.setVisibility(View.GONE);
+        }
         absence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this,Sahb.class));
                 }
                 else{
-                    Toast.makeText(MainActivity.this,"جاري تنفيذ جزء الغياب الخاص بالطالب" ,Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(MainActivity.this,Servcies.class));
                 }
             }
         });

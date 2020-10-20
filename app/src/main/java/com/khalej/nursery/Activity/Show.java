@@ -41,7 +41,7 @@ int x=1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this, "Nasser.otf", true);
+        calligrapher.setFont(this, "Droid.ttf", true);
 
 
         name=findViewById(R.id.name);

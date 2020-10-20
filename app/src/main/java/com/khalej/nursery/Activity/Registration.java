@@ -50,7 +50,7 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this, "Nasser.otf", true);
+        calligrapher.setFont(this, "Droid.ttf", true);
 
        i=getIntent();
 

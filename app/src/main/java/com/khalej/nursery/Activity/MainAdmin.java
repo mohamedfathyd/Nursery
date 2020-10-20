@@ -33,7 +33,7 @@ public class MainAdmin extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainAdmin.this,Login.class));
+                startActivity(new Intent(MainAdmin.this,AfterLogin.class));
                 finish();
             }
         });

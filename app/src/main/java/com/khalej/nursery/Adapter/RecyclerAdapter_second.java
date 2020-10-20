@@ -43,7 +43,7 @@ public class RecyclerAdapter_second extends RecyclerView.Adapter<RecyclerAdapter
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
 
-        myTypeface = Typeface.createFromAsset(context.getAssets(), "Nasser.otf");
+        myTypeface = Typeface.createFromAsset(context.getAssets(), "Droid.ttf");
 
         holder.Name.setText(contactslist.get(position).getname());
         holder.Name.setTypeface(myTypeface);

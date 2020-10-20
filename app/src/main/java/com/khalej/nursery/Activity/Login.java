@@ -43,6 +43,7 @@ public class Login extends AppCompatActivity {
     login_ login_;
     String lang;
     Switch swtch;
+    Intent i;
 
    Context context;
     @Override
@@ -65,7 +66,7 @@ public class Login extends AppCompatActivity {
 
 
         Calligrapher calligrapher = new Calligrapher(this);
-        calligrapher.setFont(this, "Nasser.otf", true);
+        calligrapher.setFont(this, "Droid.ttf", true);
 
         swtch=findViewById(R.id.swtch);
 
@@ -145,6 +146,18 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        i=getIntent();
+        if(i.getIntExtra("type",0)==1){
+            textViewLinkRegisterrr.setVisibility(View.GONE);
+        }
+        if(i.getIntExtra("type",0)==2){
+            Naccount.setVisibility(View.GONE);
+        }
+        if(i.getIntExtra("type",0)==3){
+            Naccount.setVisibility(View.GONE);
+            textViewLinkRegisterrr.setVisibility(View.GONE);
+        }
     }
     public void fetchInfo(){
         progressDialog = ProgressDialog.show(Login.this,"جاري تسجيل الدخول","Please wait...",false,false);
@@ -180,7 +193,11 @@ public class Login extends AppCompatActivity {
                         dlgAlert.setPositiveButton("حسنا", null);
                         dlgAlert.setCancelable(true);
                         dlgAlert.create().show();
-                        startActivity(new Intent(Login.this,MainActivity.class));}
+                        if(sharedpref.getInt("type",0)==2){
+                            startActivity(new Intent(Login.this,MainCnsumer.class));
+                        }
+                        else{
+                        startActivity(new Intent(Login.this,MainActivity.class));}}
                     catch (Exception e){
                         Toast.makeText(Login.this,"هناك خطأ فى الهاتف او الرقم السري ",Toast.LENGTH_LONG).show();
 

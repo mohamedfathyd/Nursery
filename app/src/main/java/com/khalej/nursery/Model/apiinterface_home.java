@@ -75,6 +75,19 @@ public interface apiinterface_home {
     @POST("nursery/Nursery_new_absence.php")
     Call<ResponseBody> getcontacts_add_absense(@Field("id") int id, @Field("name") String name, @Field("details") String details,
                                               @Field("month") int month, @Field("num_days") int num_days);
+    @FormUrlEncoded
+    @POST("nursery/Nursery_new_report.php")
+    Call<ResponseBody> getcontacts_add_report(@Field("id") int id,@Field("details") String details,
+                                               @Field("month") int month);
+
+
+    @FormUrlEncoded
+    @POST("nursery/Nursery_get_absence.php")
+    Call<List<contact_absence>> getcontacts_absence(@Field("id") int id);
+
+    @FormUrlEncoded
+    @POST("nursery/Nursery_get_report.php")
+    Call<List<contact_report>> getcontacts_report(@Field("id") int id);
 
 }
 

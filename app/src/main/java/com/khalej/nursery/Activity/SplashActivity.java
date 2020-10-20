@@ -35,10 +35,10 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                sharedpref = getSharedPreferences("ترشيد", Context.MODE_PRIVATE);
+                sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
                 edt = sharedpref.edit();
                 edt.putInt("number",0);
-                startActivity(new Intent(SplashActivity.this, Login.class));
+                startActivity(new Intent(SplashActivity.this, AfterLogin.class));
                 finish();
             }
 

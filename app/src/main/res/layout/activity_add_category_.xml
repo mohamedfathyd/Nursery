@@ -30,7 +30,7 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:textColor="#ffffff"
-                    android:text="أضافة تدريب"
+                    android:text="Add Offer"
                     android:layout_gravity="center"
                     android:id="@+id/toolbar_title" />
             </androidx.appcompat.widget.Toolbar>
@@ -80,7 +80,7 @@
                         android:id="@+id/textInputEditTextName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="اسم التدريب"
+                        android:hint="Name"
 
                         android:inputType="text"
                         android:maxLines="1"
@@ -97,7 +97,7 @@
                         android:id="@+id/textInputEditTextprice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="عدد مرات التدريب"
+                        android:hint="Number of use"
 
                         android:inputType="number"
                         android:maxLines="1"
@@ -114,7 +114,7 @@
                         android:id="@+id/textInputEditTextdetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="التفاصيل"
+                        android:hint="details"
                         android:inputType="text"
                         android:maxLines="6"
                         />
@@ -131,7 +131,7 @@
                         android:id="@+id/textInputEditTexterror"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
-                        android:hint="العروض"
+                        android:hint="Offer"
                         android:inputType="text"
                         android:maxLines="6"
                         />
@@ -143,7 +143,7 @@
                     android:layout_marginTop="40dp"
                     android:background="@drawable/shape2"
                     android:textColor="#ffffff"
-                    android:text="أضافة تدريب" />
+                    android:text="Add Offer" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
