@@ -95,7 +95,7 @@ public interface apiinterface_home {
 
     @FormUrlEncoded
     @POST("nursery/Nursery_add_chat.php")
-    Call<ResponseBody> getcontacts_addchat(@Field("sud_id") int id,@Field("sender") int sender,@Field("text") String text);
+    Call<ResponseBody> getcontacts_addchat(@Field("sub_id") int id,@Field("sender") int sender,@Field("text") String text);
 
 }
 

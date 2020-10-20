@@ -23,7 +23,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:text="شات"
+            android:text="الشات"
             android:layout_gravity="center"
             android:id="@+id/toolbar_title" />
 

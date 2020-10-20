@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
-                android:text="طلبات الشحن "
+                android:text=""
                 android:visibility="gone"
                 android:id="@+id/orders"
 
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
-                android:text="سحب رصيد"
+                android:text=""
                   android:layout_marginTop="30dp"
                 android:id="@+id/sahb"
                 android:visibility="gone"

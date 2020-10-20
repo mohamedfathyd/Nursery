@@ -65,7 +65,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mani Sai Prasad"
+                    android:text="Nursary App"
                     android:id="@+id/name"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
@@ -164,7 +164,7 @@
                     android:background="@drawable/rounded_edittext"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="manisaiprasadam@gmail.com"/>
+                    android:text="nursary@gmail.com"/>
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
@@ -244,7 +244,7 @@
 
             android:textColor="#ffffff"
             android:background="@drawable/shape2"
-            android:text="إضافة الى سلة المشتربات" />
+            android:text="" />
 
         </LinearLayout>
 

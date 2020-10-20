@@ -1,5 +1,6 @@
 package com.khalej.nursery.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -47,20 +48,19 @@ Intent i;
     private SharedPreferences sharedpref;
     private SharedPreferences.Editor edt;
     ProgressBar progressBar;
+    ProgressDialog progressDialog;
  Intent intent;
  int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat_data);
+        setContentView(R.layout.activity_chat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         i=getIntent();
         setSupportActionBar(toolbar);
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "Droid.ttf", true);
-        this.setTitle("");
-        progressBar=(ProgressBar)findViewById(R.id.progressBar_subject);
-        progressBar.setVisibility(View.VISIBLE);
+
         sendd=findViewById(R.id.sendd);
         message=findViewById(R.id.textchat);
 
@@ -72,6 +72,7 @@ Intent i;
         });
         toolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left_black_24dp);
         setSupportActionBar(toolbar);
+        this.setTitle("");
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -85,8 +86,8 @@ Intent i;
         toolbar_title=findViewById(R.id.toolbar_title);
 intent=getIntent();
 id=intent.getIntExtra("id",0);
-        toolbar_title.setText(intent.getStringExtra("name"));
-        sharedpref = getSharedPreferences("Education", Context.MODE_PRIVATE);
+      //  toolbar_title.setText(intent.getStringExtra("name"));
+        sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
         edt = sharedpref.edit();
         recyclerView=findViewById(R.id.recyclerview);
         layoutManager = new GridLayoutManager(this, 1);
@@ -109,11 +110,10 @@ id=intent.getIntExtra("id",0);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
         recyclerView.setHasFixedSize(true);
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
-        Call<List<contact_chat>> call = apiinterface.getcontacts_chat(id);
+        Call<List<contact_chat>> call = apiinterface.getcontacts_chat(intent.getIntExtra("id",0));
         call.enqueue(new Callback<List<contact_chat>>() {
             @Override
             public void onResponse(Call<List<contact_chat>> call, Response<List<contact_chat>> response) {
-                progressBar.setVisibility(View.GONE);
 
                 try {
 
@@ -143,7 +143,7 @@ id=intent.getIntExtra("id",0);
             @Override
             public void onFailure(Call<List<contact_chat>> call, Throwable t) {
                 contactList=new ArrayList<>();
-                progressBar.setVisibility(View.GONE);
+
 
             }
         });
@@ -159,7 +159,9 @@ id=intent.getIntExtra("id",0);
     }
 
     public void fetchInfo_send(){
-
+        sendd.setClickable(false);
+        progressDialog = ProgressDialog.show(chat_s.this,"جاري ارسال الرسالة","Please wait...",false,false);
+        progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_addchat(i.getIntExtra("id",0),2,message.getText().toString()+"");
 
@@ -167,11 +169,14 @@ id=intent.getIntExtra("id",0);
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Toast.makeText(chat_s.this,"تم الأرسال",Toast.LENGTH_LONG).show();fetchInfo();
+                sendd.setClickable(true);
+                progressDialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-
+                sendd.setClickable(true);
+                progressDialog.dismiss();
             }
         });
     }

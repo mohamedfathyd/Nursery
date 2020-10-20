@@ -46,9 +46,12 @@ public class RecyclerAdapter_chat extends RecyclerView.Adapter<RecyclerAdapter_c
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
 
        if(contactslist.get(position).getSender()==1){
-        holder.sender.setText(""+contactslist.get(position).getText());}
+        holder.sender.setText(""+contactslist.get(position).getText());
+        holder.recive.setVisibility(View.GONE);
+       }
         else {
            holder.recive.setText(""+contactslist.get(position).getText());
+           holder.sender.setVisibility(View.GONE);
        }
 
 

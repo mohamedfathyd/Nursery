@@ -74,7 +74,7 @@ public class Second_category extends AppCompatActivity {
 intent=getIntent();
 id=intent.getIntExtra("id",0);
         toolbar_title.setText(intent.getStringExtra("name"));
-        sharedpref = getSharedPreferences("Education", Context.MODE_PRIVATE);
+        sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
         edt = sharedpref.edit();
         recyclerView=findViewById(R.id.recyclerview);
         layoutManager = new GridLayoutManager(this, 1);

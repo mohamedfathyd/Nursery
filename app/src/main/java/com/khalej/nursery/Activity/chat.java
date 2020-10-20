@@ -45,6 +45,7 @@ public class chat extends AppCompatActivity {
     TextView toolbar_title;
     EditText textchat;
     ImageView sendd;
+    ProgressDialog progressDialog;
 
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerAdapter_chat recyclerAdapter;
@@ -57,15 +58,13 @@ public class chat extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat_data);
+        setContentView(R.layout.activity_chat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
 
         setSupportActionBar(toolbar);
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "Droid.ttf", true);
-        this.setTitle("");
-        progressBar=(ProgressBar)findViewById(R.id.progressBar_subject);
-        progressBar.setVisibility(View.VISIBLE);
+this.setTitle("");
         sendd=findViewById(R.id.sendd);
         message=findViewById(R.id.textchat);
 
@@ -89,10 +88,11 @@ public class chat extends AppCompatActivity {
         );
         toolbar_title=findViewById(R.id.toolbar_title);
 intent=getIntent();
-id=sharedpref.getInt("id",0);
-        toolbar_title.setText(intent.getStringExtra("name"));
-        sharedpref = getSharedPreferences("Education", Context.MODE_PRIVATE);
+
+      //  toolbar_title.setText(intent.getStringExtra("name"));
+        sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
         edt = sharedpref.edit();
+        id=sharedpref.getInt("id",0);
         recyclerView=findViewById(R.id.recyclerview);
         layoutManager = new GridLayoutManager(this, 1);
         StaggeredGridLayoutManager staggeredGridLayoutManager =
@@ -118,7 +118,6 @@ id=sharedpref.getInt("id",0);
         call.enqueue(new Callback<List<contact_chat>>() {
             @Override
             public void onResponse(Call<List<contact_chat>> call, Response<List<contact_chat>> response) {
-                progressBar.setVisibility(View.GONE);
 
                 try {
 
@@ -148,7 +147,7 @@ id=sharedpref.getInt("id",0);
             @Override
             public void onFailure(Call<List<contact_chat>> call, Throwable t) {
                 contactList=new ArrayList<>();
-                progressBar.setVisibility(View.GONE);
+
 
             }
         });
@@ -164,19 +163,25 @@ id=sharedpref.getInt("id",0);
     }
 
     public void fetchInfo_send(){
-
+         sendd.setClickable(false);
+        progressDialog = ProgressDialog.show(chat.this,"جاري ارسال الرسالة","Please wait...",false,false);
+        progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_addchat(sharedpref.getInt("id",0),1,message.getText().toString()+"");
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                sendd.setClickable(true);
                 Toast.makeText(chat.this,"تم الأرسال",Toast.LENGTH_LONG).show();fetchInfo();
+                progressDialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-
+                sendd.setClickable(true);
+                progressDialog.dismiss();
             }
         });
     }
