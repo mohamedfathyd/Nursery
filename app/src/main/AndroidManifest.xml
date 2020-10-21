@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.AfterLogin"></activity>
+        <activity android:name=".Activity.Forget_Password"></activity>
+        <activity android:name=".Activity.AfterLogin" />
         <activity android:name=".Activity.General_category" />
         <activity android:name=".Activity.Roaia" />
         <activity android:name=".Activity.Sahb" />

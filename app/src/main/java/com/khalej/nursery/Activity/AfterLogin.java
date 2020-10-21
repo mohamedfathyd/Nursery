@@ -32,6 +32,7 @@ public class AfterLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(AfterLogin.this,Login.class);
                 intent.putExtra("type",1);
+                intent.putExtra("name","تسجيل دخول ولي الأمر");
                 startActivity(intent);
             }
         });
@@ -40,6 +41,7 @@ public class AfterLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(AfterLogin.this,Login.class);
                 intent.putExtra("type",2);
+                intent.putExtra("name","تسجيل دخول المشرف");
                 startActivity(intent);
             }
         });
@@ -48,6 +50,7 @@ public class AfterLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(AfterLogin.this,Login.class);
                 intent.putExtra("type",3);
+                intent.putExtra("name","تسجيل دخول الأدمن");
                 startActivity(intent);
             }
         });

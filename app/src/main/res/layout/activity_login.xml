@@ -3,7 +3,7 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backk"
+    android:background="@drawable/yyy"
     android:paddingBottom="20dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
@@ -28,6 +28,19 @@
         android:layout_marginTop="130dp"
         android:background="@drawable/sss"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/name"
+            android:text=""
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            />
+
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -88,6 +101,18 @@
 
                 android:textColor="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/forget"
+            android:text="نسيت كلمة المرور ؟"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButtonLogin"

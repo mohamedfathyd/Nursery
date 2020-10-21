@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -40,6 +41,7 @@ public class Login extends AppCompatActivity {
         private SharedPreferences sharedpref;
         private SharedPreferences.Editor edt;
     ProgressDialog progressDialog;
+    TextView forget,name;
     login_ login_;
     String lang;
     Switch swtch;
@@ -64,7 +66,15 @@ public class Login extends AppCompatActivity {
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         setContentView(R.layout.activity_login);
 
+        forget=findViewById(R.id.forget);
+        name=findViewById(R.id.name);
 
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this,Forget_Password.class));
+            }
+        });
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "Droid.ttf", true);
 
@@ -148,6 +158,7 @@ public class Login extends AppCompatActivity {
         });
 
         i=getIntent();
+        name.setText(i.getStringExtra("name"));
         if(i.getIntExtra("type",0)==1){
             textViewLinkRegisterrr.setVisibility(View.GONE);
         }
