@@ -7,16 +7,15 @@
     android:layoutDirection="rtl"
 
     android:layout_marginTop="10dp"
-    android:background="@drawable/rounded_edittext_t"
+
     >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_centerVertical="true"
         app:cardCornerRadius="8dp"
-
+        app:cardBackgroundColor="#9f9f9f"
 
         app:cardElevation="8dp">
 
@@ -46,7 +45,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:layout_gravity="center_vertical"
-                     android:background="@drawable/rounded_edittext_t"
                     android:layout_marginStart="5dp"
                     android:padding="5dp"
                     android:layout_marginLeft="5dp"
@@ -95,6 +93,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:visibility="gone"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:id="@+id/rased"
