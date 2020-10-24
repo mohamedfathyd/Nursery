@@ -81,7 +81,6 @@
             android:id="@+id/textInputLayoutaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:background="@drawable/shape"
             android:layout_marginTop="20dp">
 
@@ -89,7 +88,7 @@
                 android:id="@+id/textInputEditTextaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/address"
+                android:hint="رقم الهوية الوطنية"
                 android:inputType="number"
                 android:maxLines="1"
                 android:textColor="@color/colorAccent" />

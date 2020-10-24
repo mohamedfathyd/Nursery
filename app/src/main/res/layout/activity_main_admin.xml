@@ -55,8 +55,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/shape2"
-                android:text=""
-                android:visibility="gone"
+                android:text="Regiter Requests"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
                 android:id="@+id/orders"
 
                 />

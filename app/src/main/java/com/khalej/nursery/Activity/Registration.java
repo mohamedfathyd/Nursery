@@ -113,16 +113,16 @@ public class Registration extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 progressDialog.dismiss();
                 AlertDialog.Builder dlgAlert = new AlertDialog.Builder(Registration.this);
-                dlgAlert.setMessage("تم أنشاء حساب جديد بنجاح");
+                dlgAlert.setMessage("تم أنشاء حساب جديد بنجاح ... سيتم مراجعة طلب النضمام والموافقة من قبل الأدمن");
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setPositiveButton("حسنا", null);
                 dlgAlert.setCancelable(true);
                 dlgAlert.create().show();
-                login_=new login_();
-                String phone=textInputEditTextphone.getText().toString();
-                login_.fetchInfo(Registration.this,phone,textInputEditTextpassword.getText().toString());
-                finish();
+//                login_=new login_();
+//                String phone=textInputEditTextphone.getText().toString();
+//                login_.fetchInfo(Registration.this,phone,textInputEditTextpassword.getText().toString());
+//                finish();
             }
 
             @Override

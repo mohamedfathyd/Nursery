@@ -93,6 +93,9 @@
         <activity
             android:name=".Activity.chat_s"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Register_Request"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

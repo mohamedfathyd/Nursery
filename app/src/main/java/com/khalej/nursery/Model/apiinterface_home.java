@@ -97,5 +97,8 @@ public interface apiinterface_home {
     @POST("nursery/Nursery_add_chat.php")
     Call<ResponseBody> getcontacts_addchat(@Field("sub_id") int id,@Field("sender") int sender,@Field("text") String text);
 
+    @GET("nursery/Nursery_all_users_nursary.php")
+    Call<List<contact_userinfo>> get_all_users_nursary();
+
 }
 

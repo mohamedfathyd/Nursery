@@ -30,6 +30,12 @@ public class MainAdmin extends AppCompatActivity {
         deletem=findViewById(R.id.deletem);
         sahb=findViewById(R.id.sahb);
         logout=findViewById(R.id.logout);
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainAdmin.this,Register_Request.class));
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
