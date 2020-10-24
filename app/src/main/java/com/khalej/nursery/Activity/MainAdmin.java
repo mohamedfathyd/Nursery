@@ -49,13 +49,7 @@ public class MainAdmin extends AppCompatActivity {
                                         startActivity(new Intent(MainAdmin.this, Sahb.class));
                                     }
                                 });
-                orders.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(MainAdmin.this, Orders.class));
 
-                    }
-                });
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
