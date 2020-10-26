@@ -96,6 +96,12 @@
         <activity
             android:name=".Activity.Register_Request"
             android:screenOrientation="portrait" />
+        <activity android:name=".Activity.Update_annonce"/>
+        <activity android:name=".Activity.Up_annonce"/>
+        <activity android:name=".Activity.Up_category_"/>
+        <activity android:name=".Activity.Update_category"/>
+        <activity android:name=".Activity.Update_general_category"/>
+        <activity android:name=".Activity.Up_general_category_"/>
     </application>
 
 </manifest>

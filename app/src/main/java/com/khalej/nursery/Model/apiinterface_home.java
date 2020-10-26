@@ -42,8 +42,17 @@ public interface apiinterface_home {
                                                       @Field("price") String price,@Field("description")String description,
                                                       @Field("error") String error ,@Field("id")int id);
     @FormUrlEncoded
+    @POST("nursery/Nursery_update_category.php")
+    Call<ResponseBody> getcontacts_update_first_category(@Field("name") String name, @Field("image") String image,
+                                                      @Field("price") String price,@Field("description")String description,
+                                                      @Field("error") String error ,@Field("id")int id ,@Field("a_id")int a_id);
+    @FormUrlEncoded
     @POST("nursery/Nursery_add_general_category.php")
     Call<ResponseBody> getcontacts_add_general_category(@Field("name") String name, @Field("image") String image);
+
+    @FormUrlEncoded
+    @POST("nursery/Nursery_update_general_category.php")
+    Call<ResponseBody> getcontacts_update_general_category(@Field("name") String name, @Field("image") String image ,@Field("id")int id);
 
     @FormUrlEncoded
     @POST("nursery/Nursery_delete_category.php")
@@ -53,6 +62,10 @@ public interface apiinterface_home {
     Call<ResponseBody> delete_general(@Field("id") int id);
     @FormUrlEncoded
     @POST("nursery/Nursery_add_annonce.php") Call<ResponseBody> getcontacts_add_annonce(@Field("image") String image);
+    @FormUrlEncoded
+    @POST("nursery/Nursery_update_annonce.php") Call<ResponseBody> getcontacts_update_annonce(@Field("image") String image,
+                                                                                              @Field("id") int id);
+
     @FormUrlEncoded
     @POST("nursery/Nursery_delete_annonce.php")
     Call<ResponseBody> delete_annonce(@Field("id") int id);

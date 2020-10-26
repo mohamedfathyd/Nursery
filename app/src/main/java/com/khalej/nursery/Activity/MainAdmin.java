@@ -14,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainAdmin extends AppCompatActivity {
     Button add,delete,addannonce,deleteannonce,adddouc,deletedouc,addm,deletem,
-            orders,noti,offer,offer_img,tager,del_tager,reg_tager,offerdelet,sahb;
+            orders,noti,offer,offer_img,tager,del_tager,reg_tager,offerdelet,sahb,
+    updateNews,updateOffer,updateEvent;
     ImageView logout;
     apiinterface_home apiinterface;
     @Override
@@ -30,6 +31,28 @@ public class MainAdmin extends AppCompatActivity {
         deletem=findViewById(R.id.deletem);
         sahb=findViewById(R.id.sahb);
         logout=findViewById(R.id.logout);
+        updateEvent=findViewById(R.id.updatetem);
+        updateOffer=findViewById(R.id.update);
+        updateNews=findViewById(R.id.updateannonce);
+        logout=findViewById(R.id.logout);
+        updateOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainAdmin.this,Update_category.class));
+            }
+        });
+        updateNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainAdmin.this,Update_annonce.class));
+            }
+        });
+        updateEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainAdmin.this,Update_general_category.class));
+            }
+        });
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

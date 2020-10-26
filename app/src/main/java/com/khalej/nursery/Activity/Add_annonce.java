@@ -1,7 +1,9 @@
 package com.khalej.nursery.Activity;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -15,8 +17,11 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Base64;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -28,6 +33,7 @@ import com.khalej.nursery.R;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -47,6 +53,9 @@ public class Add_annonce extends AppCompatActivity {
     Bitmap bitmap;
     ProgressDialog progressDialog;
     Spinner spinner;
+    DatePickerDialog picker;
+    TextView timeSelect,dateSelect;
+    String date="";
     TextInputLayout textInputLayoutdetails,textInputLayoutname,textInputLayoutaddress,textInputLayoutphone;
     TextInputEditText textInputEditTextdetails,textInputEditTextname,textInputEditTextaddress,textInputEditTextphone;
 
@@ -67,7 +76,78 @@ public class Add_annonce extends AppCompatActivity {
                     }
                 }
         );
+        timeSelect=findViewById(R.id.timeSelect);
+        timeSelect.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+
+                TimePickerDialog mTimePicker;
+                mTimePicker = new TimePickerDialog(Add_annonce.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        String hour="";
+                        if(selectedHour<10){
+                            hour="0"+(selectedHour);
+                        }
+                        else{
+                            hour= String.valueOf((selectedHour));
+                        }
+                        String minute="";
+                        if(selectedMinute<10){
+                            minute="0"+(selectedMinute);
+                        }
+                        else{
+                            minute= String.valueOf((selectedMinute));
+                        }
+                        timeSelect.setText( hour + ":" + minute);
+                    }
+                }, hour, minute, true);
+                mTimePicker.setTitle("Select Time");
+                mTimePicker.show();
+
+            }
+        });
+        dateSelect=findViewById(R.id.dateSelect);
+        dateSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar cldr = Calendar.getInstance();
+                int day = cldr.get(Calendar.DAY_OF_MONTH);
+                int month = cldr.get(Calendar.MONTH);
+                int year = cldr.get(Calendar.YEAR);
+                // date picker dialog
+                picker = new DatePickerDialog(Add_annonce.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                String month="";
+                                if((monthOfYear+1)<10){
+                                    month="0"+(monthOfYear+1);
+                                }
+                                else{
+                                    month= String.valueOf((monthOfYear+1));
+                                }
+                                String day="";
+                                if((dayOfMonth+1)<10){
+                                    day="0"+(dayOfMonth);
+                                }
+                                else{
+                                    day= String.valueOf((dayOfMonth));
+                                }
+                                dateSelect.setText(year + "-" + month+ "-" + day);
+                                date=year + "-" + month+ "-" + day;
+                            }
+                        }, day, month, year);
+                picker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                picker.show();
+
+            }
+        });
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

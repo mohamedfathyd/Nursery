@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainCnsumer extends AppCompatActivity {
     private SharedPreferences sharedpref;
     private SharedPreferences.Editor edt;
-    Button Login1,Login2,Login3,Login4;
+    Button Login1,Login2,Login3,Login4,Login5;
     ImageView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainCnsumer extends AppCompatActivity {
         Login2=findViewById(R.id.login2);
         Login3=findViewById(R.id.login3);
         Login4=findViewById(R.id.login4);
+        Login5=findViewById(R.id.login5);
         Login1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +56,13 @@ public class MainCnsumer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainCnsumer.this,Sahb_bb.class);
+                startActivity(intent);
+            }
+        });
+        Login5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainCnsumer.this,Register_Request.class);
                 startActivity(intent);
             }
         });

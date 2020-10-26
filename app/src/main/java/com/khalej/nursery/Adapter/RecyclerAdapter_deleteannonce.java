@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import com.khalej.nursery.Activity.Update_annonce;
 import com.khalej.nursery.Model.Apiclient_home;
 import com.khalej.nursery.Model.apiinterface_home;
 import com.khalej.nursery.Model.contact_annonce;
@@ -70,8 +72,9 @@ public class RecyclerAdapter_deleteannonce extends RecyclerView.Adapter<Recycler
                            }})
                        .setNegativeButton(android.R.string.no, null).show();
 
-           }
-       });
+
+          }
+      });
     }
     @Override
     public int getItemCount() {

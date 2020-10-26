@@ -92,6 +92,18 @@
             android:id="@+id/login4"
 
             />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape2"
+            android:text="طلبات الأشتراك الجديدة"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:id="@+id/login5"
+
+            />
     </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

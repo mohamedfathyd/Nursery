@@ -53,7 +53,7 @@ public class RecyclerAdapter_deletefirst extends RecyclerView.Adapter<RecyclerAd
 
 
     holder.Name.setText(contactslist.get(position).getname());
-
+        holder.details.setText(contactslist.get(position).getDescription());
         Glide.with(context).load(contactslist.get(position).getImg()).error(R.drawable.log).into(holder.image);
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -78,13 +78,14 @@ public class RecyclerAdapter_deletefirst extends RecyclerView.Adapter<RecyclerAd
     }
 
 public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView Name;
+        TextView Name,details;
         ImageView image;
 
         ImageView delete;
     public MyViewHolder(View itemView) {
         super(itemView);
         Name=(TextView)itemView.findViewById(R.id.txt_fish_title);
+        details=(TextView)itemView.findViewById(R.id.details);
         image=(ImageView)itemView.findViewById(R.id.imageView3);
         delete=(ImageView)itemView.findViewById(R.id.delete);
 
