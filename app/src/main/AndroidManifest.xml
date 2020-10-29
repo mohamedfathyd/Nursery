@@ -102,6 +102,7 @@
         <activity android:name=".Activity.Update_category"/>
         <activity android:name=".Activity.Update_general_category"/>
         <activity android:name=".Activity.Up_general_category_"/>
+        <activity android:name=".Activity.Details"/>
     </application>
 
 </manifest>

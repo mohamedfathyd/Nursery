@@ -90,7 +90,7 @@ public class Add_general_category_ extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fetchInfo();
-                regesiter.setClickable(false);
+
             }
         });
         dateSelect=findViewById(R.id.dateSelect);

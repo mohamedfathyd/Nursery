@@ -40,7 +40,7 @@
                 android:layout_below="@+id/app_bar"
                 android:layout_marginTop="30dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/download"
+                android:src="@drawable/download"
                 android:id="@+id/image"
                 />
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -82,7 +82,7 @@
                         android:id="@+id/textInputEditTextNe"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Delete"
+                        android:hint="Details"
 
                         android:inputType="text"
                         android:maxLines="1"
@@ -99,7 +99,7 @@
                         android:textSize="15dp"
                         android:layout_marginLeft="2dp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:hint="03:30"
+                        android:text="03:30"
                         android:id="@+id/timeSelect"
                         android:layout_marginRight="2dp"
                         android:layout_gravity="center"
@@ -113,7 +113,7 @@
                         android:textSize="17dp"
                         android:layout_marginLeft="2dp"
                         android:textColor="@color/colorPrimaryDark"
-                        android:hint="DD/MM/YYYY"
+                        android:text="DD/MM/YYYY"
                         android:id="@+id/dateSelect"
                         android:layout_weight="1"
                         android:layout_gravity="center"

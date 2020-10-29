@@ -160,7 +160,7 @@ public class Add_annonce extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fetchInfo();
-                regesiter.setClickable(false);
+
             }
         });
     }

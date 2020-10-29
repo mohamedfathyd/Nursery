@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import com.khalej.nursery.Activity.Details;
 import com.khalej.nursery.Model.Apiclient_home;
 import com.khalej.nursery.Model.apiinterface_home;
 import com.khalej.nursery.Model.contact_home;
@@ -58,17 +60,11 @@ public class RecyclerAdapter_deletefirst extends RecyclerView.Adapter<RecyclerAd
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               new AlertDialog.Builder(context)
-                       .setTitle("nursery")
-                       .setMessage("هل انت متأكد انك تريد الحذف ؟")
-                       .setIcon(R.drawable.log)
-                       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                           public void onClick(DialogInterface dialog, int whichButton) {
-                               int id=contactslist.get(position).getId();
-                               fetchInfo(id);
-                           }})
-                       .setNegativeButton(android.R.string.no, null).show();
+              Intent intent=new Intent(context, Details.class);
+              intent.putExtra("id",contactslist.get(position).getId());
+              intent.putExtra("type",1);
+              intent.putExtra("details",contactslist.get(position).getname()+"\n"+contactslist.get(position).getDescription());
+              context.startActivity(intent);
            }
        });
     }

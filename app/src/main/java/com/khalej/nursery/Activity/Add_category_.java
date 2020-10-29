@@ -108,7 +108,7 @@ spin=findViewById(R.id.spinCountry);
             @Override
             public void onClick(View v) {
                 fetchInfo();
-                regesiter.setClickable(false);
+
             }
         });
         dateSelect=findViewById(R.id.dateSelect);
