@@ -61,6 +61,8 @@ public class RecyclerAdapter_deletegeneral extends RecyclerView.Adapter<Recycler
                Intent intent=new Intent(context, Details.class);
                intent.putExtra("id",contactslist.get(position).getId());
                intent.putExtra("type",2);
+               intent.putExtra("image",contactslist.get(position).getImg());
+
                intent.putExtra("details",contactslist.get(position).getname());
                context.startActivity(intent);
            }

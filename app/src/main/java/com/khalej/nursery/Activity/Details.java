@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.khalej.nursery.Model.Apiclient_home;
@@ -81,6 +82,7 @@ public class Details extends AppCompatActivity {
         );
         intent=getIntent();
        details.setText(intent.getStringExtra("details"));
+        Glide.with(this).load(intent.getStringExtra("image")).error(R.drawable.log).into(imageView);
 
         regesiter.setOnClickListener(new View.OnClickListener() {
             @Override

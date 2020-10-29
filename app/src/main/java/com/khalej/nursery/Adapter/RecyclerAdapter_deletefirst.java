@@ -63,6 +63,7 @@ public class RecyclerAdapter_deletefirst extends RecyclerView.Adapter<RecyclerAd
               Intent intent=new Intent(context, Details.class);
               intent.putExtra("id",contactslist.get(position).getId());
               intent.putExtra("type",1);
+              intent.putExtra("image",contactslist.get(position).getImg());
               intent.putExtra("details",contactslist.get(position).getname()+"\n"+contactslist.get(position).getDescription());
               context.startActivity(intent);
            }
