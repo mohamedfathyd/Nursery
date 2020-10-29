@@ -169,6 +169,8 @@ public class Details extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
                 Toast.makeText(Details.this,"تم الحذف",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Details.this,MainAdmin.class));
+
                 finish();
             }
 
@@ -194,6 +196,8 @@ public class Details extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
                 Toast.makeText(Details.this,"تم الحذف",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Details.this,MainAdmin.class));
+
                 finish();
             }
 

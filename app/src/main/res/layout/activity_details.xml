@@ -58,6 +58,8 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_margin="10dp"
+                   android:padding="20dp"
+                   android:textSize="18dp"
                    android:background="@drawable/rounded_edittext"
                    android:id="@+id/details"
                    />
