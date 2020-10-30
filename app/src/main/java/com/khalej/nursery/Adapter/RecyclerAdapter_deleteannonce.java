@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import com.khalej.nursery.Activity.Details;
 import com.khalej.nursery.Activity.Update_annonce;
 import com.khalej.nursery.Model.Apiclient_home;
 import com.khalej.nursery.Model.apiinterface_home;
@@ -59,19 +60,15 @@ public class RecyclerAdapter_deleteannonce extends RecyclerView.Adapter<Recycler
            @Override
            public void onClick(View v) {
 
-               new AlertDialog.Builder(context)
-                       .setTitle("nursery")
-                       .setIcon(R.drawable.log)
-                       .setMessage("هل انت متأكد انك تريد الحذف ؟")
-                       .setIcon(android.R.drawable.ic_dialog_alert)
-                       .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                           public void onClick(DialogInterface dialog, int whichButton) {
-                               int id=contactslist.get(position).getId();
-                               fetchInfo(id);
-                           }})
-                       .setNegativeButton(android.R.string.no, null).show();
+               Intent intent=new Intent(context, Details.class);
+               intent.putExtra("id",contactslist.get(position).getId());
+               intent.putExtra("type",3);
+               intent.putExtra("image",contactslist.get(position).getImage());
 
+               intent.putExtra("details","news Name"+
+                       "\n \n\n"+"News Details");
+               context.startActivity(intent);
 
           }
       });
@@ -106,7 +103,7 @@ public static class MyViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(context,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Deleted Done",Toast.LENGTH_LONG).show();
                 ((Activity)context).finish();
             }
 

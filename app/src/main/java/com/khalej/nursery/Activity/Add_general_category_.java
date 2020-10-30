@@ -212,11 +212,11 @@ public class Add_general_category_ extends AppCompatActivity {
         try{
          image = convertToString();}
         catch (Exception e){
-            Toast.makeText(Add_general_category_.this,"من فضلك اختر صورة" , Toast.LENGTH_LONG).show();
+            Toast.makeText(Add_general_category_.this,"Please Select Image" , Toast.LENGTH_LONG).show();
             return;
 
         }
-        progressDialog = ProgressDialog.show(Add_general_category_.this,"جارى تسجيل النشاط الجديد","Please wait...",false,false);
+        progressDialog = ProgressDialog.show(Add_general_category_.this,"Loading add new event","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_general_category(textInputEditTextname.getText().toString()
@@ -228,7 +228,7 @@ public class Add_general_category_ extends AppCompatActivity {
                 progressDialog.dismiss();
 
                 AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(Add_general_category_.this);
-                dlgAlert.setMessage("تم تسجيل النشاط الجديد بنجاح ");
+                dlgAlert.setMessage("Added new event succesfully");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setPositiveButton("OK", null);

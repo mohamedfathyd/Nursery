@@ -63,7 +63,8 @@ public class RecyclerAdapter_deletegeneral extends RecyclerView.Adapter<Recycler
                intent.putExtra("type",2);
                intent.putExtra("image",contactslist.get(position).getImg());
 
-               intent.putExtra("details",contactslist.get(position).getname());
+               intent.putExtra("details",contactslist.get(position).getname()+
+                       "\n \n\n"+"Event Details");
                context.startActivity(intent);
            }
        });
@@ -98,7 +99,7 @@ public static class MyViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(context,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Deleted Done",Toast.LENGTH_LONG).show();
                 ((Activity)context).finish();
             }
 

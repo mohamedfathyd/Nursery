@@ -209,11 +209,11 @@ public class Add_annonce extends AppCompatActivity {
         try{
             image = convertToString();}
         catch (Exception e){
-            Toast.makeText(Add_annonce.this,"من فضلك اختر صورة" , Toast.LENGTH_LONG).show();
+            Toast.makeText(Add_annonce.this,"Please Select Image" , Toast.LENGTH_LONG).show();
             return;
 
         }
-        progressDialog = ProgressDialog.show(Add_annonce.this,"جارى تسجيل الخبر الجديد","Please wait...",false,false);
+        progressDialog = ProgressDialog.show(Add_annonce.this,"Loading Add New News","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_annonce(image);
@@ -224,7 +224,7 @@ public class Add_annonce extends AppCompatActivity {
                 progressDialog.dismiss();
 
                 AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(Add_annonce.this);
-                dlgAlert.setMessage("تم تسجيل الخبر الجديد بنجاح ");
+                dlgAlert.setMessage("News added Successfully");
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setPositiveButton("OK", null);

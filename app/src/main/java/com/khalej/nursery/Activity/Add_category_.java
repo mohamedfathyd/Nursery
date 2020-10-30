@@ -233,11 +233,11 @@ spin=findViewById(R.id.spinCountry);
         try{
          image = convertToString();}
         catch (Exception e){
-            Toast.makeText(Add_category_.this,"من فضلك اختر صورة" , Toast.LENGTH_LONG).show();
+            Toast.makeText(Add_category_.this,"Please Select Image" , Toast.LENGTH_LONG).show();
             return;
 
         }
-        progressDialog = ProgressDialog.show(Add_category_.this,"جارى تسجيل التدريب الجديد","Please wait...",false,false);
+        progressDialog = ProgressDialog.show(Add_category_.this,"Loading Add new offer","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_first_category(textInputEditTextname.getText().toString()
@@ -250,7 +250,7 @@ spin=findViewById(R.id.spinCountry);
                 progressDialog.dismiss();
 
                 AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(Add_category_.this);
-                dlgAlert.setMessage("تم تسجيل التدريب الجديد بنجاح ");
+                dlgAlert.setMessage("Offer Added Succesfully ");
                 dlgAlert.setIcon(R.drawable.log);
                 dlgAlert.setTitle("nursery");
                 dlgAlert.setPositiveButton("OK", null);

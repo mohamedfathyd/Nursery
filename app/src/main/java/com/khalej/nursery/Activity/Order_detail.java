@@ -116,7 +116,7 @@ public class Order_detail extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(Order_detail.this,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(Order_detail.this,"Deleted Done",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Order_detail.this,MainAdmin.class));
 
             }

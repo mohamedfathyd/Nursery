@@ -64,7 +64,7 @@ public class RecyclerAdapter_deletefirst extends RecyclerView.Adapter<RecyclerAd
               intent.putExtra("id",contactslist.get(position).getId());
               intent.putExtra("type",1);
               intent.putExtra("image",contactslist.get(position).getImg());
-              intent.putExtra("details",contactslist.get(position).getname()+"\n"+contactslist.get(position).getDescription());
+              intent.putExtra("details",contactslist.get(position).getname()+"\n \n\n"+contactslist.get(position).getDescription());
               context.startActivity(intent);
            }
        });
@@ -100,7 +100,7 @@ public static class MyViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(context,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Deleted Done",Toast.LENGTH_LONG).show();
                 ((Activity)context).finish();
             }
 

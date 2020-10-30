@@ -90,7 +90,7 @@ public class Details extends AppCompatActivity {
                 if(intent.getIntExtra("type",0)==1){
                     new AlertDialog.Builder(Details.this)
                             .setTitle("nursery")
-                            .setMessage("هل انت متأكد انك تريد الحذف ؟")
+                            .setMessage("Are you sure want to delete ?")
                             .setIcon(R.drawable.log)
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -101,15 +101,28 @@ public class Details extends AppCompatActivity {
 
 
                }
-                else{
+                else if(intent.getIntExtra("type",0)==2){
                     new AlertDialog.Builder(Details.this)
                             .setTitle("nursery")
-                            .setMessage("هل انت متأكد انك تريد الحذف ؟")
+                            .setMessage("Are you sure want to delete ?")
                             .setIcon(R.drawable.log)
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                                 public void onClick(DialogInterface dialog, int whichButton) {
                                     fetchInfoOffer(intent.getIntExtra("id",0));
+                                }})
+                            .setNegativeButton(android.R.string.no, null).show();
+
+                }
+                else{
+                    new AlertDialog.Builder(Details.this)
+                            .setTitle("nursery")
+                            .setMessage("Are you sure want to delete ?")
+                            .setIcon(R.drawable.log)
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    fetchInfoNews(intent.getIntExtra("id",0));
                                 }})
                             .setNegativeButton(android.R.string.no, null).show();
 
@@ -168,7 +181,7 @@ public class Details extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(Details.this,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(Details.this,"Deleted Done",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Details.this,MainAdmin.class));
 
                 finish();
@@ -195,7 +208,35 @@ public class Details extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-                Toast.makeText(Details.this,"تم الحذف",Toast.LENGTH_LONG).show();
+                Toast.makeText(Details.this,"Deleted Done",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Details.this,MainAdmin.class));
+
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+            }
+        });
+
+
+
+    }
+
+    public void fetchInfoNews(int id) {
+
+        apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
+        Call<ResponseBody> call = null;
+        call=apiinterface.delete_annonce(id);
+
+
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                Toast.makeText(Details.this,"Deleted Done",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(Details.this,MainAdmin.class));
 
                 finish();
