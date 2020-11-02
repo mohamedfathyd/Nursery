@@ -54,7 +54,7 @@ public class Add_category_ extends AppCompatActivity {
     private  static final int IMAGE = 100;
     ImageView imageView;
     Toolbar toolbar;
-    int category_id;
+    int category_id=1;
     List<contact_home> contactListCategory=new ArrayList<>();
     Bitmap bitmap;
     ProgressDialog progressDialog;
@@ -87,7 +87,7 @@ spin=findViewById(R.id.spinCountry);
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                category_id=contactListCategory.get(i).getId();
+                category_id=1;
 
             }
 
@@ -242,7 +242,7 @@ spin=findViewById(R.id.spinCountry);
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_first_category(textInputEditTextname.getText().toString()
                 ,image,textInputEditTextphone.getText().toString()+"",textInputEditTextaddress.getText().toString()
-                ,textInputEditTexterror.getText().toString(), category_id);
+                ,textInputEditTexterror.getText().toString(), category_id,dateSelect.getText().toString(),timeSelect.getText().toString());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override

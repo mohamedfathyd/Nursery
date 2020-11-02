@@ -58,7 +58,7 @@ public class Add_general_category_ extends AppCompatActivity {
     String date="";
     Spinner spin;
     TextInputLayout textInputLayoutdetails,textInputLayoutname,textInputLayoutaddress,textInputLayoutphone;
-    TextInputEditText textInputEditTextdetails,textInputEditTexterror,textInputEditTextname,textInputEditTextaddress,textInputEditTextphone;
+    TextInputEditText textInputEditTextdetails,textInputEditTextNe,textInputEditTextname,textInputEditTextaddress,textInputEditTextphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,7 +129,7 @@ public class Add_general_category_ extends AppCompatActivity {
 
             }
         });
-
+        textInputEditTextNe=findViewById(R.id.textInputEditTextNe);
         timeSelect=findViewById(R.id.timeSelect);
         timeSelect.setOnClickListener(new View.OnClickListener() {
 
@@ -220,7 +220,7 @@ public class Add_general_category_ extends AppCompatActivity {
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
         Call<ResponseBody> call = apiinterface.getcontacts_add_general_category(textInputEditTextname.getText().toString()
-                ,image);
+                ,image,textInputEditTextNe.getText().toString(),dateSelect.getText().toString(),timeSelect.getText().toString());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override

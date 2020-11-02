@@ -40,32 +40,44 @@ public interface apiinterface_home {
     @POST("nursery/Nursery_add_category.php")
     Call<ResponseBody> getcontacts_add_first_category(@Field("name") String name, @Field("image") String image,
                                                       @Field("price") String price,@Field("description")String description,
-                                                      @Field("error") String error ,@Field("id")int id);
+                                                      @Field("error") String error ,@Field("id")int id,@Field("date") String date,
+                                                      @Field("time") String time);
     @FormUrlEncoded
     @POST("nursery/Nursery_update_category.php")
     Call<ResponseBody> getcontacts_update_first_category(@Field("name") String name, @Field("image") String image,
                                                       @Field("price") String price,@Field("description")String description,
-                                                      @Field("error") String error ,@Field("id")int id ,@Field("a_id")int a_id);
+                                                      @Field("error") String error ,@Field("id")int id ,@Field("a_id")int a_id,
+                                                         @Field("date")String date,
+                                                         @Field("time")String time);
 
     @FormUrlEncoded
     @POST("nursery/Nursery_update_category_noImage.php")
     Call<ResponseBody> getcontacts_update_first_category_noImage(@Field("name") String name,
                                                          @Field("price") String price,@Field("description")String description,
-                                                         @Field("error") String error ,@Field("id")int id ,@Field("a_id")int a_id);
+                                                         @Field("error") String error ,@Field("id")int id ,@Field("a_id")int a_id,
+                                                                 @Field("date")String date,
+                                                                 @Field("time")String time);
 
 
     @FormUrlEncoded
     @POST("nursery/Nursery_add_general_category.php")
-    Call<ResponseBody> getcontacts_add_general_category(@Field("name") String name, @Field("image") String image);
+    Call<ResponseBody> getcontacts_add_general_category(@Field("name") String name, @Field("image") String image,@Field("details")String details,
+                                                        @Field("date")String date,
+                                                        @Field("time")String time);
 
     @FormUrlEncoded
     @POST("nursery/Nursery_update_general_category.php")
-    Call<ResponseBody> getcontacts_update_general_category(@Field("name") String name, @Field("image") String image ,@Field("id")int id);
+    Call<ResponseBody> getcontacts_update_general_category(@Field("name") String name, @Field("image") String image ,@Field("id")int id
+            ,@Field("details")String details,
+                                                           @Field("date")String date,
+                                                           @Field("time")String time);
 
 
     @FormUrlEncoded
     @POST("nursery/Nursery_update_general_category_noImage.php")
-    Call<ResponseBody> getcontacts_update_general_category_noImage(@Field("name") String name,@Field("id")int id);
+    Call<ResponseBody> getcontacts_update_general_category_noImage(@Field("name") String name,@Field("id")int id,@Field("details")String details,
+                                                                   @Field("date")String date,
+                                                                   @Field("time")String time);
 
     @FormUrlEncoded
     @POST("nursery/Nursery_delete_category.php")
@@ -74,10 +86,23 @@ public interface apiinterface_home {
     @POST("nursery/Nursery_delete_general_category.php")
     Call<ResponseBody> delete_general(@Field("id") int id);
     @FormUrlEncoded
-    @POST("nursery/Nursery_add_annonce.php") Call<ResponseBody> getcontacts_add_annonce(@Field("image") String image);
+    @POST("nursery/Nursery_add_annonce.php") Call<ResponseBody> getcontacts_add_annonce(@Field("image") String image,@Field("details")String details,
+                                                                                        @Field("date")String date,@Field("time") String time,
+                                                                                        @Field("name")String name);
     @FormUrlEncoded
     @POST("nursery/Nursery_update_annonce.php") Call<ResponseBody> getcontacts_update_annonce(@Field("image") String image,
-                                                                                              @Field("id") int id);
+                                                                                              @Field("id") int id,
+                                                                                              @Field("name")String name,
+                                                                                              @Field("details")String details,
+                                                                                              @Field("date")String date,
+                                                                                              @Field("time")String time);
+
+    @FormUrlEncoded
+    @POST("nursery/Nursery_update_annonceNoImage.php") Call<ResponseBody> getcontacts_update_annonce_(@Field("id") int id,
+                                                                                              @Field("name")String name,
+                                                                                              @Field("details")String details,
+                                                                                              @Field("date")String date,
+                                                                                              @Field("time")String time);
 
     @FormUrlEncoded
     @POST("nursery/Nursery_delete_annonce.php")

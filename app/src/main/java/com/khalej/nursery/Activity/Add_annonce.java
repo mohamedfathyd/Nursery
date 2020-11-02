@@ -57,7 +57,7 @@ public class Add_annonce extends AppCompatActivity {
     TextView timeSelect,dateSelect;
     String date="";
     TextInputLayout textInputLayoutdetails,textInputLayoutname,textInputLayoutaddress,textInputLayoutphone;
-    TextInputEditText textInputEditTextdetails,textInputEditTextname,textInputEditTextaddress,textInputEditTextphone;
+    TextInputEditText textInputEditTextdetails,textInputEditTextname,textInputEditTextNe,textInputEditTextphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,7 +155,7 @@ public class Add_annonce extends AppCompatActivity {
             }
         });
 
-        textInputEditTextname.setVisibility(View.GONE);
+        textInputEditTextNe=findViewById(R.id.textInputEditTextNe);
         regesiter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -216,7 +216,8 @@ public class Add_annonce extends AppCompatActivity {
         progressDialog = ProgressDialog.show(Add_annonce.this,"Loading Add New News","Please wait...",false,false);
         progressDialog.show();
         apiinterface= Apiclient_home.getapiClient().create(apiinterface_home.class);
-        Call<ResponseBody> call = apiinterface.getcontacts_add_annonce(image);
+        Call<ResponseBody> call = apiinterface.getcontacts_add_annonce(image,textInputEditTextNe.getText().toString(),dateSelect.getText().toString(),
+                timeSelect.getText().toString(),textInputEditTextname.getText().toString());
 
         call.enqueue(new Callback<ResponseBody>() {
             @Override

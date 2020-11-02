@@ -2,7 +2,7 @@ package com.khalej.nursery.Model;
 import com.google.gson.annotations.SerializedName;
 
 
-public class contact_home{
+public class contact_home_ {
     @SerializedName("id")
     int id;
     @SerializedName("name")
@@ -11,7 +11,7 @@ public class contact_home{
     String Img;
     @SerializedName("price")
     String price;
-    @SerializedName("description")
+    @SerializedName("details")
     String Description;
     @SerializedName("error")
     String error;

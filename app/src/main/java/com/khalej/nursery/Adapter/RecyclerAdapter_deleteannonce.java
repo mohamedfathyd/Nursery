@@ -66,8 +66,9 @@ public class RecyclerAdapter_deleteannonce extends RecyclerView.Adapter<Recycler
                intent.putExtra("type",3);
                intent.putExtra("image",contactslist.get(position).getImage());
 
-               intent.putExtra("details","news Name"+
-                       "\n \n\n"+"News Details");
+               intent.putExtra("details",contactslist.get(position).getName()+
+                       "\n \n\n"+contactslist.get(position).getDetails()+"\n \n\n"+
+                       contactslist.get(position).getDate()+"  "+contactslist.get(position).getTime());
                context.startActivity(intent);
 
           }

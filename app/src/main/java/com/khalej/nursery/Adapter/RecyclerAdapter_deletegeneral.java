@@ -63,8 +63,9 @@ public class RecyclerAdapter_deletegeneral extends RecyclerView.Adapter<Recycler
                intent.putExtra("type",2);
                intent.putExtra("image",contactslist.get(position).getImg());
 
-               intent.putExtra("details",contactslist.get(position).getname()+
-                       "\n \n\n"+"Event Details");
+               intent.putExtra("details",contactslist.get(position).getname()
+                       +"\n \n\n"+contactslist.get(position).getDescription()+"\n \n\n"+
+                       contactslist.get(position).getDate()+"  "+contactslist.get(position).getTime());
                context.startActivity(intent);
            }
        });
