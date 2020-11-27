@@ -120,7 +120,7 @@ int x=1;
                         error.setText(contactListCategory.get(0).getDetails());
                         price.setText(contactListCategory.get(0).getMonth()+"");
                         description.setText(contactListCategory.get(0).getNum_days()+"");
-                        Toast.makeText(Show_absence.this,sharedpref.getInt("id",0)+"", Toast.LENGTH_LONG).show();
+                       //Toast.makeText(Show_absence.this,sharedpref.getInt("id",0)+"", Toast.LENGTH_LONG).show();
                     }
                 }
                 catch (Exception e){
