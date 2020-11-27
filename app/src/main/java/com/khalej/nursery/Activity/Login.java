@@ -147,7 +147,12 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(textInputEditTextphone.getText().toString().equals("12345678")&&textInputEditTextpassword.getText().toString().equals("87654321")){
+                if (textInputEditTextphone.getText().toString().length()!=10) {
+
+                    textInputLayoutphone.setError("رقم الهاتف يجب ان يتكون من 10 أرقام");
+                       return;
+                }
+                if(textInputEditTextphone.getText().toString().equals("1234567890")&&textInputEditTextpassword.getText().toString().equals("9876543210")){
                     startActivity(new Intent(Login.this,MainAdmin.class));
 
                 }

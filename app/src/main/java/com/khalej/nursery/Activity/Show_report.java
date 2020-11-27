@@ -1,6 +1,7 @@
 package com.khalej.nursery.Activity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -51,7 +52,8 @@ int x=1;
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "Droid.ttf", true);
 
-
+        sharedpref = getSharedPreferences("tarched", Context.MODE_PRIVATE);
+        edt = sharedpref.edit();
         name=findViewById(R.id.name);
         imageView=findViewById(R.id.img);
         error=findViewById(R.id.error);
@@ -89,7 +91,7 @@ int x=1;
                 settingsDialog.show();
             }
         });
-
+fetchInfo();
 
     }
 

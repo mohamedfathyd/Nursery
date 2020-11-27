@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mmm"
+        android:layoutDirection="ltr"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:text="Update Event"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_below="@+id/app_bar"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/download"
+                android:id="@+id/image"
+                />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_below="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerInParent="true"
+
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginTop="30dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+
+                        android:inputType="text"
+                        android:maxLines="1"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutNme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginTop="30dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextNe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Details"
+
+                        android:inputType="text"
+                        android:maxLines="1"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="03:30"
+                        android:id="@+id/timeSelect"
+                        android:layout_marginRight="2dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="DD/MM/YYYY"
+                        android:id="@+id/dateSelect"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButtonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/shape2"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="false"
+                    android:text="Update Event" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>

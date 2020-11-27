@@ -86,10 +86,14 @@ public class Registration extends AppCompatActivity {
                     textInputLayoutconfirmpassword.setError("كلمة تأكيد مختلفة");
 
                     textInputEditTextconfirmpassword.setText("");
-                } else {
+                }
+               else if (textInputEditTextphone.getText().toString().length()!=10) {
 
+                   textInputLayoutphone.setError("رقم الهاتف يجب ان يتكون من 10 أرقام");
 
-                     fetchInfo();
+               }
+               else {
+                    fetchInfo();
                 }
             }
         });

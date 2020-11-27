@@ -66,8 +66,8 @@ AppCompatButton appCompatButtonRegister;
 
         //  String currentTime = Calendar.getInstance().getTime().toString();
         apiinterface = Apiclient_home.getapiClient().create(apiinterface_home.class);
-        Call<ResponseBody> call = apiinterface.getcontacts_add_absense(i.getIntExtra("id",0),i.getStringExtra("name"),
-                details.getText().toString(),Integer.parseInt(month.getText().toString()),Integer.parseInt(textInputEditTextName.getText().toString()));
+        Call<ResponseBody> call = apiinterface.getcontacts_add_report(i.getIntExtra("id",0),
+                details.getText().toString(),Integer.parseInt(month.getText().toString()));
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
